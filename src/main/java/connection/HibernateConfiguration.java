@@ -62,11 +62,9 @@ public class HibernateConfiguration
         Properties props = new Properties();
         InputStream input = null;
 
-        String dir = System.getProperty("user.dir");
-        System.out.println("current dir = " + dir);
         try {
             ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-            input = classLoader.getResourceAsStream("main/resources/hibernate.properties");
+            input = classLoader.getResourceAsStream("hibernate.properties");
             // load a properties file
             props.load(input);
         } catch (IOException ex) {
