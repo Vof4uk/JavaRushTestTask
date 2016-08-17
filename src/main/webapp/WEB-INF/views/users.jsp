@@ -27,7 +27,7 @@
              alt="Logo">
     </a>
 </h3>
-<form method="get" action="/search_results">
+<form method="get" action="search_results">
     <input type="search" value="type username to search" name="username" width="300">
     <input type="submit" value="search">
 

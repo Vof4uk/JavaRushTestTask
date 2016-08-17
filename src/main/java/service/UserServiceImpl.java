@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService {
     private UserDAO userDAO;
 
     private void validateUser(User user) throws Exception{
-        if(user.getAge()<0 || user.getAge()>150)
+        if(user.getAge() != null && (user.getAge()<0 || user.getAge()>150))
             throw new BadAgeException();
         if(user.getUsername() == null || user.getUsername().length() < 4 || user.getUsername().length() > 25)
             throw new BadUsernameException();
